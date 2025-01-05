@@ -1,0 +1,2461 @@
+{
+  "processor_specifications": {
+    "architecture_specifications": {
+      "ISA": {
+        "instructionlen_in_bits": 32,
+        "mapping_from_set_of_instruction_field_values_to_set_of_instructions": [
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0010011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "ADDI",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0010011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b010"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SLTI",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0010011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b011"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SLTIU",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0010011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b111"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "ANDI",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0010011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b110"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "ORI",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0010011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b100"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "XORI",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0010011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b001"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0000000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SLLI",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0010011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b101"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0000000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SRLI",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0010011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b101"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0100000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SRAI",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110111"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "LUI",
+              "rs1": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs1_bit_index_lower": "none",
+                "rs1_bit_index_higher": "none"
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 12,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 12,
+                "immediate_bit_index_higher": 31
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 0,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0010111"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "AUIPC",
+              "rs1": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs1_bit_index_lower": "none",
+                "rs1_bit_index_higher": "none"
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 12,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 12,
+                "immediate_bit_index_higher": 31
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 0,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b000"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0000000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "ADD",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "immediate_bit_index_lower": "none",
+                "immediate_bit_index_higher": "none"
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b010"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0000000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SLT",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "immediate_bit_index_lower": "none",
+                "immediate_bit_index_higher": "none"
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b011"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0000000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SLTU",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "immediate_bit_index_lower": "none",
+                "immediate_bit_index_higher": "none"
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b111"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0000000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "AND",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "immediate_bit_index_lower": "none",
+                "immediate_bit_index_higher": "none"
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b110"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0000000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "OR",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "immediate_bit_index_lower": "none",
+                "immediate_bit_index_higher": "none"
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b100"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0000000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "XOR",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "immediate_bit_index_lower": "none",
+                "immediate_bit_index_higher": "none"
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b001"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0000000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SLL",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "immediate_bit_index_lower": "none",
+                "immediate_bit_index_higher": "none"
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b101"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0000000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SRL",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "immediate_bit_index_lower": "none",
+                "immediate_bit_index_higher": "none"
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b000"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0100000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SUB",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "immediate_bit_index_lower": "none",
+                "immediate_bit_index_higher": "none"
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b101"
+                },
+                {
+                  "bit_index_lower": 25,
+                  "bit_index_higher": 31,
+                  "value": "0b0100000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SRA",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "immediate_bit_index_lower": "none",
+                "immediate_bit_index_higher": "none"
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "integer_ALU",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b1101111"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "JAL",
+              "rs1": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs1_bit_index_lower": "none",
+                "rs1_bit_index_higher": "none"
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": [
+                {
+                  "instruction_bit_index_lower": 12,
+                  "instruction_bit_index_higher": 19,
+                  "immediate_bit_index_lower": 12,
+                  "immediate_bit_index_higher": 19
+                },
+                {
+                  "instruction_bit_index_lower": 20,
+                  "instruction_bit_index_higher": 20,
+                  "immediate_bit_index_lower": 11,
+                  "immediate_bit_index_higher": 11
+                },
+                {
+                  "instruction_bit_index_lower": 21,
+                  "instruction_bit_index_higher": 30,
+                  "immediate_bit_index_lower": 1,
+                  "immediate_bit_index_higher": 10
+                },
+                {
+                  "instruction_bit_index_lower": 31,
+                  "instruction_bit_index_higher": 31,
+                  "immediate_bit_index_lower": 20,
+                  "immediate_bit_index_higher": 20
+                }
+              ],
+              "sign_extend_immediate": 1,
+              "instruction_type": "unconditional_jump",
+              "branch_condition": "none",
+              "target_address_type": "pc_relative_target_address",
+              "register_read": 0,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b1100111"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "JALR",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "unconditional_jump",
+              "branch_condition": "none",
+              "target_address_type": "register_relative_target_address",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b1100011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "BEQ",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rd_bit_index_lower": "none",
+                "rd_bit_index_higher": "none"
+              },
+              "immediate": [
+                {
+                  "instruction_bit_index_lower": 7,
+                  "instruction_bit_index_higher": 7,
+                  "immediate_bit_index_lower": 11,
+                  "immediate_bit_index_higher": 11
+                },
+                {
+                  "instruction_bit_index_lower": 8,
+                  "instruction_bit_index_higher": 11,
+                  "immediate_bit_index_lower": 1,
+                  "immediate_bit_index_higher": 4
+                },
+                {
+                  "instruction_bit_index_lower": 25,
+                  "instruction_bit_index_higher": 30,
+                  "immediate_bit_index_lower": 5,
+                  "immediate_bit_index_higher": 10
+                },
+                {
+                  "instruction_bit_index_lower": 31,
+                  "instruction_bit_index_higher": 31,
+                  "immediate_bit_index_lower": 12,
+                  "immediate_bit_index_higher": 12
+                }
+              ],
+              "sign_extend_immediate": 1,
+              "instruction_type": "conditional_branch",
+              "branch_condition": "is_equal(rs1_data,rs2_data)",
+              "target_address_type": "pc_relative_target_address",
+              "register_read": 1,
+              "register_write": 0
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b1100011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b001"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "BNE",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rd_bit_index_lower": "none",
+                "rd_bit_index_higher": "none"
+              },
+              "immediate": [
+                {
+                  "instruction_bit_index_lower": 7,
+                  "instruction_bit_index_higher": 7,
+                  "immediate_bit_index_lower": 11,
+                  "immediate_bit_index_higher": 11
+                },
+                {
+                  "instruction_bit_index_lower": 8,
+                  "instruction_bit_index_higher": 11,
+                  "immediate_bit_index_lower": 1,
+                  "immediate_bit_index_higher": 4
+                },
+                {
+                  "instruction_bit_index_lower": 25,
+                  "instruction_bit_index_higher": 30,
+                  "immediate_bit_index_lower": 5,
+                  "immediate_bit_index_higher": 10
+                },
+                {
+                  "instruction_bit_index_lower": 31,
+                  "instruction_bit_index_higher": 31,
+                  "immediate_bit_index_lower": 12,
+                  "immediate_bit_index_higher": 12
+                }
+              ],
+              "sign_extend_immediate": 1,
+              "instruction_type": "conditional_branch",
+              "branch_condition": "is_not_equal(rs1_data,rs2_data)",
+              "target_address_type": "pc_relative_target_address",
+              "register_read": 1,
+              "register_write": 0
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b1100011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b100"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "BLT",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rd_bit_index_lower": "none",
+                "rd_bit_index_higher": "none"
+              },
+              "immediate": [
+                {
+                  "instruction_bit_index_lower": 7,
+                  "instruction_bit_index_higher": 7,
+                  "immediate_bit_index_lower": 11,
+                  "immediate_bit_index_higher": 11
+                },
+                {
+                  "instruction_bit_index_lower": 8,
+                  "instruction_bit_index_higher": 11,
+                  "immediate_bit_index_lower": 1,
+                  "immediate_bit_index_higher": 4
+                },
+                {
+                  "instruction_bit_index_lower": 25,
+                  "instruction_bit_index_higher": 30,
+                  "immediate_bit_index_lower": 5,
+                  "immediate_bit_index_higher": 10
+                },
+                {
+                  "instruction_bit_index_lower": 31,
+                  "instruction_bit_index_higher": 31,
+                  "immediate_bit_index_lower": 12,
+                  "immediate_bit_index_higher": 12
+                }
+              ],
+              "sign_extend_immediate": 1,
+              "instruction_type": "conditional_branch",
+              "branch_condition": "is_less_than_signed(rs1_data,rs2_data)",
+              "target_address_type": "pc_relative_target_address",
+              "register_read": 1,
+              "register_write": 0
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b1100011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b110"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "BLTU",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rd_bit_index_lower": "none",
+                "rd_bit_index_higher": "none"
+              },
+              "immediate": [
+                {
+                  "instruction_bit_index_lower": 7,
+                  "instruction_bit_index_higher": 7,
+                  "immediate_bit_index_lower": 11,
+                  "immediate_bit_index_higher": 11
+                },
+                {
+                  "instruction_bit_index_lower": 8,
+                  "instruction_bit_index_higher": 11,
+                  "immediate_bit_index_lower": 1,
+                  "immediate_bit_index_higher": 4
+                },
+                {
+                  "instruction_bit_index_lower": 25,
+                  "instruction_bit_index_higher": 30,
+                  "immediate_bit_index_lower": 5,
+                  "immediate_bit_index_higher": 10
+                },
+                {
+                  "instruction_bit_index_lower": 31,
+                  "instruction_bit_index_higher": 31,
+                  "immediate_bit_index_lower": 12,
+                  "immediate_bit_index_higher": 12
+                }
+              ],
+              "sign_extend_immediate": 1,
+              "instruction_type": "conditional_branch",
+              "branch_condition": "is_less_than_unsigned(rs1_data,rs2_data)",
+              "target_address_type": "pc_relative_target_address",
+              "register_read": 1,
+              "register_write": 0
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b1100011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b101"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "BGE",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rd_bit_index_lower": "none",
+                "rd_bit_index_higher": "none"
+              },
+              "immediate": [
+                {
+                  "instruction_bit_index_lower": 7,
+                  "instruction_bit_index_higher": 7,
+                  "immediate_bit_index_lower": 11,
+                  "immediate_bit_index_higher": 11
+                },
+                {
+                  "instruction_bit_index_lower": 8,
+                  "instruction_bit_index_higher": 11,
+                  "immediate_bit_index_lower": 1,
+                  "immediate_bit_index_higher": 4
+                },
+                {
+                  "instruction_bit_index_lower": 25,
+                  "instruction_bit_index_higher": 30,
+                  "immediate_bit_index_lower": 5,
+                  "immediate_bit_index_higher": 10
+                },
+                {
+                  "instruction_bit_index_lower": 31,
+                  "instruction_bit_index_higher": 31,
+                  "immediate_bit_index_lower": 12,
+                  "immediate_bit_index_higher": 12
+                }
+              ],
+              "sign_extend_immediate": 1,
+              "instruction_type": "conditional_branch",
+              "branch_condition": "is_greater_than_or_equal_signed(rs1_data,rs2_data)",
+              "target_address_type": "pc_relative_target_address",
+              "register_read": 1,
+              "register_write": 0
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b1100011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b111"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "BGEU",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rd_bit_index_lower": "none",
+                "rd_bit_index_higher": "none"
+              },
+              "immediate": [
+                {
+                  "instruction_bit_index_lower": 7,
+                  "instruction_bit_index_higher": 7,
+                  "immediate_bit_index_lower": 11,
+                  "immediate_bit_index_higher": 11
+                },
+                {
+                  "instruction_bit_index_lower": 8,
+                  "instruction_bit_index_higher": 11,
+                  "immediate_bit_index_lower": 1,
+                  "immediate_bit_index_higher": 4
+                },
+                {
+                  "instruction_bit_index_lower": 25,
+                  "instruction_bit_index_higher": 30,
+                  "immediate_bit_index_lower": 5,
+                  "immediate_bit_index_higher": 10
+                },
+                {
+                  "instruction_bit_index_lower": 31,
+                  "instruction_bit_index_higher": 31,
+                  "immediate_bit_index_lower": 12,
+                  "immediate_bit_index_higher": 12
+                }
+              ],
+              "sign_extend_immediate": 1,
+              "instruction_type": "conditional_branch",
+              "branch_condition": "is_greater_than_or_equal_unsigned(rs1_data,rs2_data)",
+              "target_address_type": "pc_relative_target_address",
+              "register_read": 1,
+              "register_write": 0
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0000011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b010"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "LW",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "load",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0000011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b001"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "LH",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "load",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0000011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b101"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "LHU",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "load",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0000011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "LB",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "load",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0000011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b100"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "LBU",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "load",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0100011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b010"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SW",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rd_bit_index_lower": "none",
+                "rd_bit_index_higher": "none"
+              },
+              "immediate": [
+                {
+                  "instruction_bit_index_lower": 7,
+                  "instruction_bit_index_higher": 11,
+                  "immediate_bit_index_lower": 0,
+                  "immediate_bit_index_higher": 4
+                },
+                {
+                  "instruction_bit_index_lower": 25,
+                  "instruction_bit_index_higher": 31,
+                  "immediate_bit_index_lower": 5,
+                  "immediate_bit_index_higher": 11
+                }
+              ],
+              "sign_extend_immediate": 1,
+              "instruction_type": "store",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 0
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0100011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b001"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SH",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rd_bit_index_lower": "none",
+                "rd_bit_index_higher": "none"
+              },
+              "immediate": [
+                {
+                  "instruction_bit_index_lower": 7,
+                  "instruction_bit_index_higher": 11,
+                  "immediate_bit_index_lower": 0,
+                  "immediate_bit_index_higher": 4
+                },
+                {
+                  "instruction_bit_index_lower": 25,
+                  "instruction_bit_index_higher": 31,
+                  "immediate_bit_index_lower": 5,
+                  "immediate_bit_index_higher": 11
+                }
+              ],
+              "sign_extend_immediate": 1,
+              "instruction_type": "store",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 0
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b0100011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "SB",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 24,
+                "rs2_bit_index_lower": 0,
+                "rs2_bit_index_higher": 4
+              },
+              "rd": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rd_bit_index_lower": "none",
+                "rd_bit_index_higher": "none"
+              },
+              "immediate": [
+                {
+                  "instruction_bit_index_lower": 7,
+                  "instruction_bit_index_higher": 11,
+                  "immediate_bit_index_lower": 0,
+                  "immediate_bit_index_higher": 4
+                },
+                {
+                  "instruction_bit_index_lower": 25,
+                  "instruction_bit_index_higher": 31,
+                  "immediate_bit_index_lower": 5,
+                  "immediate_bit_index_higher": 11
+                }
+              ],
+              "sign_extend_immediate": 1,
+              "instruction_type": "store",
+              "branch_condition": "none",
+              "target_address_type": "none",
+              "register_read": 1,
+              "register_write": 0
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b1110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b000"
+                },
+                {
+                  "bit_index_lower": 20,
+                  "bit_index_higher": 31,
+                  "value": "0b000000000000"
+                },
+                {
+                  "bit_index_lower": 15,
+                  "bit_index_higher": 19,
+                  "value": "0b00000"
+                },
+                {
+                  "bit_index_lower": 7,
+                  "bit_index_higher": 11,
+                  "value": "0b00000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "ECALL",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "environment_call",
+              "branch_condition": "none",
+              "target_address_type": "absolute_target_address",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "instruction_field_value": {
+              "instruction_bits": [
+                {
+                  "bit_index_lower": 0,
+                  "bit_index_higher": 6,
+                  "value": "0b1110011"
+                },
+                {
+                  "bit_index_lower": 12,
+                  "bit_index_higher": 14,
+                  "value": "0b000"
+                },
+                {
+                  "bit_index_lower": 20,
+                  "bit_index_higher": 31,
+                  "value": "0b000000000001"
+                },
+                {
+                  "bit_index_lower": 15,
+                  "bit_index_higher": 19,
+                  "value": "0b00000"
+                },
+                {
+                  "bit_index_lower": 7,
+                  "bit_index_higher": 11,
+                  "value": "0b00000"
+                }
+              ]
+            },
+            "instruction": {
+              "mnemonic": "EBREAK",
+              "rs1": {
+                "instruction_bit_index_lower": 15,
+                "instruction_bit_index_higher": 19,
+                "rs1_bit_index_lower": 0,
+                "rs1_bit_index_higher": 4
+              },
+              "rs2": {
+                "instruction_bit_index_lower": "none",
+                "instruction_bit_index_higher": "none",
+                "rs2_bit_index_lower": "none",
+                "rs2_bit_index_higher": "none"
+              },
+              "rd": {
+                "instruction_bit_index_lower": 7,
+                "instruction_bit_index_higher": 11,
+                "rd_bit_index_lower": 0,
+                "rd_bit_index_higher": 4
+              },
+              "immediate": {
+                "instruction_bit_index_lower": 20,
+                "instruction_bit_index_higher": 31,
+                "immediate_bit_index_lower": 0,
+                "immediate_bit_index_higher": 11
+              },
+              "sign_extend_immediate": 1,
+              "instruction_type": "unconditional_jump",
+              "branch_condition": "none",
+              "target_address_type": "absolute_target_address",
+              "register_read": 1,
+              "register_write": 1
+            }
+          },
+          {
+            "mnemonic": "SRET",
+            "instruction_field_value": [
+              {
+                "bit_index_lower": "0",
+                "bit_index_higher": "6",
+                "value": "0b1110011"
+              },
+              {
+                "bit_index_lower": "12",
+                "bit_index_higher": "14",
+                "value": "0b000"
+              },
+              {
+                "bit_index_lower": "20",
+                "bit_index_higher": "31",
+                "value": "0b000100000010"
+              },
+              {
+                "bit_index_lower": "15",
+                "bit_index_higher": "19",
+                "value": "0b00000"
+              },
+              {
+                "bit_index_lower": "7",
+                "bit_index_higher": "11",
+                "value": "0b00000"
+              }
+            ],
+            "rs1": {
+              "instruction_bit_index_lower": "15",
+              "instruction_bit_index_higher": "19",
+              "rs1_bit_index_lower": "0",
+              "rs1_bit_index_higher": "4"
+            },
+            "rs2": null,
+            "rd": {
+              "instruction_bit_index_lower": "7",
+              "instruction_bit_index_higher": "11",
+              "rd_bit_index_lower": "0",
+              "rd_bit_index_higher": "4"
+            },
+            "immediate": {
+              "instruction_bit_index_lower": "20",
+              "instruction_bit_index_higher": "31",
+              "immediate_bit_index_lower": "0",
+              "immediate_bit_index_higher": "11"
+            },
+            "sign_extend_immediate": 1,
+            "instruction_type": "trap_return",
+            "branch_condition": "none",
+            "target_address_type": "absolute_target_address",
+            "register_read": 1,
+            "register_write": 1
+          },
+          {
+            "mnemonic": "CSRRW",
+            "instruction_field_value": [
+              {
+                "bit_index_lower": "0",
+                "bit_index_higher": "6",
+                "value": "0b1110011"
+              },
+              {
+                "bit_index_lower": "12",
+                "bit_index_higher": "14",
+                "value": "0b001"
+              }
+            ],
+            "rs1": {
+              "instruction_bit_index_lower": "15",
+              "instruction_bit_index_higher": "19",
+              "rs1_bit_index_lower": "0",
+              "rs1_bit_index_higher": "4"
+            },
+            "rs2": null,
+            "rd": {
+              "instruction_bit_index_lower": "7",
+              "instruction_bit_index_higher": "11",
+              "rd_bit_index_lower": "0",
+              "rd_bit_index_higher": "4"
+            },
+            "immediate": {
+              "instruction_bit_index_lower": "20",
+              "instruction_bit_index_higher": "31",
+              "immediate_bit_index_lower": "0",
+              "immediate_bit_index_higher": "11"
+            },
+            "sign_extend_immediate": 1,
+            "instruction_type": "integer_ALU",
+            "branch_condition": "none",
+            "target_address_type": "none",
+            "register_read": 1,
+            "register_write": 1
+          },
+          {
+            "mnemonic": "CSRRS",
+            "instruction_field_value": [
+              {
+                "bit_index_lower": "0",
+                "bit_index_higher": "6",
+                "value": "0b1110011"
+              },
+              {
+                "bit_index_lower": "12",
+                "bit_index_higher": "14",
+                "value": "0b010"
+              }
+            ],
+            "rs1": {
+              "instruction_bit_index_lower": "15",
+              "instruction_bit_index_higher": "19",
+              "rs1_bit_index_lower": "0",
+              "rs1_bit_index_higher": "4"
+            },
+            "rs2": null,
+            "rd": {
+              "instruction_bit_index_lower": "7",
+              "instruction_bit_index_higher": "11",
+              "rd_bit_index_lower": "0",
+              "rd_bit_index_higher": "4"
+            },
+            "immediate": {
+              "instruction_bit_index_lower": "20",
+              "instruction_bit_index_higher": "31",
+              "immediate_bit_index_lower": "0",
+              "immediate_bit_index_higher": "11"
+            },
+            "sign_extend_immediate": 1,
+            "instruction_type": "integer_ALU",
+            "branch_condition": "none",
+            "target_address_type": "none",
+            "register_read": 1,
+            "register_write": 1
+          },
+          {
+            "mnemonic": "CSRRC",
+            "instruction_field_value": [
+              {
+                "bit_index_lower": "0",
+                "bit_index_higher": "6",
+                "value": "0b1110011"
+              },
+              {
+                "bit_index_lower": "12",
+                "bit_index_higher": "14",
+                "value": "0b011"
+              }
+            ],
+            "rs1": {
+              "instruction_bit_index_lower": "15",
+              "instruction_bit_index_higher": "19",
+              "rs1_bit_index_lower": "0",
+              "rs1_bit_index_higher": "4"
+            },
+            "rs2": null,
+            "rd": {
+              "instruction_bit_index_lower": "7",
+              "instruction_bit_index_higher": "11",
+              "rd_bit_index_lower": "0",
+              "rd_bit_index_higher": "4"
+            },
+            "immediate": {
+              "instruction_bit_index_lower": "20",
+              "instruction_bit_index_higher": "31",
+              "immediate_bit_index_lower": "0",
+              "immediate_bit_index_higher": "11"
+            },
+            "sign_extend_immediate": 1,
+            "instruction_type": "integer_ALU",
+            "branch_condition": "none",
+            "target_address_type": "none",
+            "register_read": 1,
+            "register_write": 1
+          },
+          {
+            "mnemonic": "CSRRWI",
+            "instruction_field_value": [
+              {
+                "bit_index_lower": "0",
+                "bit_index_higher": "6",
+                "value": "0b1110011"
+              },
+              {
+                "bit_index_lower": "12",
+                "bit_index_higher": "14",
+                "value": "0b101"
+              }
+            ],
+            "rs1": {
+              "instruction_bit_index_lower": "15",
+              "instruction_bit_index_higher": "19",
+              "rs1_bit_index_lower": "0",
+              "rs1_bit_index_higher": "4"
+            },
+            "rs2": null,
+            "rd": {
+              "instruction_bit_index_lower": "7",
+              "instruction_bit_index_higher": "11",
+              "rd_bit_index_lower": "0",
+              "rd_bit_index_higher": "4"
+            },
+            "immediate": {
+              "instruction_bit_index_lower": "20",
+              "instruction_bit_index_higher": "31",
+              "immediate_bit_index_lower": "0",
+              "immediate_bit_index_higher": "11"
+            },
+            "sign_extend_immediate": 1,
+            "instruction_type": "integer_ALU",
+            "branch_condition": "none",
+            "target_address_type": "none",
+            "register_read": 0,
+            "register_write": 1
+          },
+          {
+            "mnemonic": "CSRRSI",
+            "instruction_field_value": [
+              {
+                "bit_index_lower": "0",
+                "bit_index_higher": "6",
+                "value": "0b1110011"
+              },
+              {
+                "bit_index_lower": "12",
+                "bit_index_higher": "14",
+                "value": "0b110"
+              }
+            ],
+            "rs1": {
+              "instruction_bit_index_lower": "15",
+              "instruction_bit_index_higher": "19",
+              "rs1_bit_index_lower": "0",
+              "rs1_bit_index_higher": "4"
+            },
+            "rs2": null,
+            "rd": {
+              "instruction_bit_index_lower": "7",
+              "instruction_bit_index_higher": "11",
+              "rd_bit_index_lower": "0",
+              "rd_bit_index_higher": "4"
+            },
+            "immediate": {
+              "instruction_bit_index_lower": "20",
+              "instruction_bit_index_higher": "31",
+              "immediate_bit_index_lower": "0",
+              "immediate_bit_index_higher": "11"
+            },
+            "sign_extend_immediate": 1,
+            "instruction_type": "integer_ALU",
+            "branch_condition": "none",
+            "target_address_type": "none",
+            "register_read": 0,
+            "register_write": 1
+          },
+          {
+            "mnemonic": "CSRRCI",
+            "instruction_field_value": [
+              {
+                "bit_index_lower": "0",
+                "bit_index_higher": "6",
+                "value": "0b1110011"
+              },
+              {
+                "bit_index_lower": "12",
+                "bit_index_higher": "14",
+                "value": "0b111"
+              }
+            ],
+            "rs1": {
+              "instruction_bit_index_lower": "15",
+              "instruction_bit_index_higher": "19",
+              "rs1_bit_index_lower": "0",
+              "rs1_bit_index_higher": "4"
+            },
+            "rs2": null,
+            "rd": {
+              "instruction_bit_index_lower": "7",
+              "instruction_bit_index_higher": "11",
+              "rd_bit_index_lower": "0",
+              "rd_bit_index_higher": "4"
+            },
+            "immediate": {
+              "instruction_bit_index_lower": "20",
+              "instruction_bit_index_higher": "31",
+              "immediate_bit_index_lower": "0",
+              "immediate_bit_index_higher": "11"
+            },
+            "sign_extend_immediate": 1,
+            "instruction_type": "integer_ALU",
+            "branch_condition": "none",
+            "target_address_type": "none",
+            "register_read": 0,
+            "register_write": 1
+          }
+        ]
+      }
+    }
+  }
+}

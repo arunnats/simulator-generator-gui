@@ -1,0 +1,788 @@
+<?xml version="1.0" ?>
+<processor_specifications>
+  <architecture_specifications>
+    <ISA>
+      <instructionlen_in_bits>32</instructionlen_in_bits>
+      <mapping_from_set_of_instruction_field_values_to_set_of_instructions>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0010011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>ADDI</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0010011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b010"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SLTI</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0010011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b011"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SLTIU</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0010011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b111"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>ANDI</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0010011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b110"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>ORI</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0010011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b100"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>XORI</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0010011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b001"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0000000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SLLI</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0010011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b101"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0000000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SRLI</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0010011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b101"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0100000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SRAI</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110111"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>LUI</mnemonic>
+            <rs1 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="12" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="12" immediate_bit_index_higher="31"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>0</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0010111"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>AUIPC</mnemonic>
+            <rs1 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="12" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="12" immediate_bit_index_higher="31"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>0</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b000"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0000000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>ADD</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b010"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0000000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SLT</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b011"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0000000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SLTU</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b111"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0000000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>AND</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b110"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0000000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>OR</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b100"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0000000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>XOR</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b001"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0000000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SLL</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b101"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0000000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SRL</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b000"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0100000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SUB</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b101"/>
+            <instruction_bits bit_index_lower="25" bit_index_higher="31" value="0b0100000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SRA</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>integer_ALU</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b1101111"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>JAL</mnemonic>
+            <rs1 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate>[{'instruction_bit_index_lower': 12, 'instruction_bit_index_higher': 19, 'immediate_bit_index_lower': 12, 'immediate_bit_index_higher': 19}, {'instruction_bit_index_lower': 20, 'instruction_bit_index_higher': 20, 'immediate_bit_index_lower': 11, 'immediate_bit_index_higher': 11}, {'instruction_bit_index_lower': 21, 'instruction_bit_index_higher': 30, 'immediate_bit_index_lower': 1, 'immediate_bit_index_higher': 10}, {'instruction_bit_index_lower': 31, 'instruction_bit_index_higher': 31, 'immediate_bit_index_lower': 20, 'immediate_bit_index_higher': 20}]</immediate>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>unconditional_jump</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>pc_relative_target_address</target_address_type>
+            <register_read>0</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b1100111"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>JALR</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>unconditional_jump</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>register_relative_target_address</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b1100011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>BEQ</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate>[{'instruction_bit_index_lower': 7, 'instruction_bit_index_higher': 7, 'immediate_bit_index_lower': 11, 'immediate_bit_index_higher': 11}, {'instruction_bit_index_lower': 8, 'instruction_bit_index_higher': 11, 'immediate_bit_index_lower': 1, 'immediate_bit_index_higher': 4}, {'instruction_bit_index_lower': 25, 'instruction_bit_index_higher': 30, 'immediate_bit_index_lower': 5, 'immediate_bit_index_higher': 10}, {'instruction_bit_index_lower': 31, 'instruction_bit_index_higher': 31, 'immediate_bit_index_lower': 12, 'immediate_bit_index_higher': 12}]</immediate>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>conditional_branch</instruction_type>
+            <branch_condition>is_equal(rs1_data,rs2_data)</branch_condition>
+            <target_address_type>pc_relative_target_address</target_address_type>
+            <register_read>1</register_read>
+            <register_write>0</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b1100011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b001"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>BNE</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate>[{'instruction_bit_index_lower': 7, 'instruction_bit_index_higher': 7, 'immediate_bit_index_lower': 11, 'immediate_bit_index_higher': 11}, {'instruction_bit_index_lower': 8, 'instruction_bit_index_higher': 11, 'immediate_bit_index_lower': 1, 'immediate_bit_index_higher': 4}, {'instruction_bit_index_lower': 25, 'instruction_bit_index_higher': 30, 'immediate_bit_index_lower': 5, 'immediate_bit_index_higher': 10}, {'instruction_bit_index_lower': 31, 'instruction_bit_index_higher': 31, 'immediate_bit_index_lower': 12, 'immediate_bit_index_higher': 12}]</immediate>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>conditional_branch</instruction_type>
+            <branch_condition>is_not_equal(rs1_data,rs2_data)</branch_condition>
+            <target_address_type>pc_relative_target_address</target_address_type>
+            <register_read>1</register_read>
+            <register_write>0</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b1100011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b100"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>BLT</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate>[{'instruction_bit_index_lower': 7, 'instruction_bit_index_higher': 7, 'immediate_bit_index_lower': 11, 'immediate_bit_index_higher': 11}, {'instruction_bit_index_lower': 8, 'instruction_bit_index_higher': 11, 'immediate_bit_index_lower': 1, 'immediate_bit_index_higher': 4}, {'instruction_bit_index_lower': 25, 'instruction_bit_index_higher': 30, 'immediate_bit_index_lower': 5, 'immediate_bit_index_higher': 10}, {'instruction_bit_index_lower': 31, 'instruction_bit_index_higher': 31, 'immediate_bit_index_lower': 12, 'immediate_bit_index_higher': 12}]</immediate>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>conditional_branch</instruction_type>
+            <branch_condition>is_less_than_signed(rs1_data,rs2_data)</branch_condition>
+            <target_address_type>pc_relative_target_address</target_address_type>
+            <register_read>1</register_read>
+            <register_write>0</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b1100011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b110"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>BLTU</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate>[{'instruction_bit_index_lower': 7, 'instruction_bit_index_higher': 7, 'immediate_bit_index_lower': 11, 'immediate_bit_index_higher': 11}, {'instruction_bit_index_lower': 8, 'instruction_bit_index_higher': 11, 'immediate_bit_index_lower': 1, 'immediate_bit_index_higher': 4}, {'instruction_bit_index_lower': 25, 'instruction_bit_index_higher': 30, 'immediate_bit_index_lower': 5, 'immediate_bit_index_higher': 10}, {'instruction_bit_index_lower': 31, 'instruction_bit_index_higher': 31, 'immediate_bit_index_lower': 12, 'immediate_bit_index_higher': 12}]</immediate>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>conditional_branch</instruction_type>
+            <branch_condition>is_less_than_unsigned(rs1_data,rs2_data)</branch_condition>
+            <target_address_type>pc_relative_target_address</target_address_type>
+            <register_read>1</register_read>
+            <register_write>0</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b1100011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b101"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>BGE</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate>[{'instruction_bit_index_lower': 7, 'instruction_bit_index_higher': 7, 'immediate_bit_index_lower': 11, 'immediate_bit_index_higher': 11}, {'instruction_bit_index_lower': 8, 'instruction_bit_index_higher': 11, 'immediate_bit_index_lower': 1, 'immediate_bit_index_higher': 4}, {'instruction_bit_index_lower': 25, 'instruction_bit_index_higher': 30, 'immediate_bit_index_lower': 5, 'immediate_bit_index_higher': 10}, {'instruction_bit_index_lower': 31, 'instruction_bit_index_higher': 31, 'immediate_bit_index_lower': 12, 'immediate_bit_index_higher': 12}]</immediate>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>conditional_branch</instruction_type>
+            <branch_condition>is_greater_than_or_equal_signed(rs1_data,rs2_data)</branch_condition>
+            <target_address_type>pc_relative_target_address</target_address_type>
+            <register_read>1</register_read>
+            <register_write>0</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b1100011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b111"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>BGEU</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate>[{'instruction_bit_index_lower': 7, 'instruction_bit_index_higher': 7, 'immediate_bit_index_lower': 11, 'immediate_bit_index_higher': 11}, {'instruction_bit_index_lower': 8, 'instruction_bit_index_higher': 11, 'immediate_bit_index_lower': 1, 'immediate_bit_index_higher': 4}, {'instruction_bit_index_lower': 25, 'instruction_bit_index_higher': 30, 'immediate_bit_index_lower': 5, 'immediate_bit_index_higher': 10}, {'instruction_bit_index_lower': 31, 'instruction_bit_index_higher': 31, 'immediate_bit_index_lower': 12, 'immediate_bit_index_higher': 12}]</immediate>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>conditional_branch</instruction_type>
+            <branch_condition>is_greater_than_or_equal_unsigned(rs1_data,rs2_data)</branch_condition>
+            <target_address_type>pc_relative_target_address</target_address_type>
+            <register_read>1</register_read>
+            <register_write>0</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0000011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b010"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>LW</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>load</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0000011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b001"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>LH</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>load</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0000011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b101"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>LHU</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>load</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0000011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>LB</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>load</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0000011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b100"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>LBU</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>load</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0100011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b010"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SW</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate>[{'instruction_bit_index_lower': 7, 'instruction_bit_index_higher': 11, 'immediate_bit_index_lower': 0, 'immediate_bit_index_higher': 4}, {'instruction_bit_index_lower': 25, 'instruction_bit_index_higher': 31, 'immediate_bit_index_lower': 5, 'immediate_bit_index_higher': 11}]</immediate>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>store</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>0</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0100011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b001"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SH</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate>[{'instruction_bit_index_lower': 7, 'instruction_bit_index_higher': 11, 'immediate_bit_index_lower': 0, 'immediate_bit_index_higher': 4}, {'instruction_bit_index_lower': 25, 'instruction_bit_index_higher': 31, 'immediate_bit_index_lower': 5, 'immediate_bit_index_higher': 11}]</immediate>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>store</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>0</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b0100011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>SB</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="20" instruction_bit_index_higher="24" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="0" rs2_bit_index_higher="4" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate>[{'instruction_bit_index_lower': 7, 'instruction_bit_index_higher': 11, 'immediate_bit_index_lower': 0, 'immediate_bit_index_higher': 4}, {'instruction_bit_index_lower': 25, 'instruction_bit_index_higher': 31, 'immediate_bit_index_lower': 5, 'immediate_bit_index_higher': 11}]</immediate>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>store</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>none</target_address_type>
+            <register_read>1</register_read>
+            <register_write>0</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b1110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b000"/>
+            <instruction_bits bit_index_lower="20" bit_index_higher="31" value="0b000000000000"/>
+            <instruction_bits bit_index_lower="15" bit_index_higher="19" value="0b00000"/>
+            <instruction_bits bit_index_lower="7" bit_index_higher="11" value="0b00000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>ECALL</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>environment_call</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>absolute_target_address</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value>
+            <instruction_bits bit_index_lower="0" bit_index_higher="6" value="0b1110011"/>
+            <instruction_bits bit_index_lower="12" bit_index_higher="14" value="0b000"/>
+            <instruction_bits bit_index_lower="20" bit_index_higher="31" value="0b000000000001"/>
+            <instruction_bits bit_index_lower="15" bit_index_higher="19" value="0b00000"/>
+            <instruction_bits bit_index_lower="7" bit_index_higher="11" value="0b00000"/>
+          </instruction_field_value>
+          <instruction>
+            <mnemonic>EBREAK</mnemonic>
+            <rs1 instruction_bit_index_lower="15" instruction_bit_index_higher="19" rs1_bit_index_lower="0" rs1_bit_index_higher="4" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rs2 instruction_bit_index_lower="none" instruction_bit_index_higher="none" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <rd instruction_bit_index_lower="7" instruction_bit_index_higher="11" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="0" rd_bit_index_higher="4" immediate_bit_index_lower="none" immediate_bit_index_higher="none"/>
+            <immediate instruction_bit_index_lower="20" instruction_bit_index_higher="31" rs1_bit_index_lower="none" rs1_bit_index_higher="none" rs2_bit_index_lower="none" rs2_bit_index_higher="none" rd_bit_index_lower="none" rd_bit_index_higher="none" immediate_bit_index_lower="0" immediate_bit_index_higher="11"/>
+            <sign_extend_immediate>1</sign_extend_immediate>
+            <instruction_type>unconditional_jump</instruction_type>
+            <branch_condition>none</branch_condition>
+            <target_address_type>absolute_target_address</target_address_type>
+            <register_read>1</register_read>
+            <register_write>1</register_write>
+          </instruction>
+        </element>
+        <element>
+          <instruction_field_value/>
+        </element>
+        <element>
+          <instruction_field_value/>
+        </element>
+        <element>
+          <instruction_field_value/>
+        </element>
+        <element>
+          <instruction_field_value/>
+        </element>
+        <element>
+          <instruction_field_value/>
+        </element>
+        <element>
+          <instruction_field_value/>
+        </element>
+        <element>
+          <instruction_field_value/>
+        </element>
+      </mapping_from_set_of_instruction_field_values_to_set_of_instructions>
+    </ISA>
+  </architecture_specifications>
+</processor_specifications>
