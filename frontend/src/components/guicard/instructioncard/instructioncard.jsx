@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardContent,
@@ -8,28 +8,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
-
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { Label } from "@/components/ui/label";
-
 import { Switch } from "@/components/ui/switch";
-
 import { Button } from "@/components/ui/button";
-
 import { Input } from "@/components/ui/input";
-
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-
 import {
   Select,
   SelectContent,
@@ -37,9 +24,84 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Cross2Icon } from "@radix-ui/react-icons";
+import BitDisplay from "./BitDisplay";
 
-export default function InstructionCard({ instNo, wordSize }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function InstructionCard({ instNo, wordSize = 32 }) {
+  const [fields, setFields] = useState([
+    { id: 1, lower: "", upper: "", value: "", valid: false },
+  ]);
+
+  const addField = () => {
+    setFields((prevFields) => [
+      ...prevFields,
+      {
+        id: prevFields.length + 1,
+        lower: "",
+        upper: "",
+        value: "",
+        valid: false,
+      },
+    ]);
+  };
+
+  const removeField = (id) => {
+    setFields((prevFields) =>
+      prevFields
+        .filter((field) => field.id !== id) // Remove the field
+        .map((field, index) => ({
+          ...field,
+          id: index + 1, // Reassign IDs sequentially
+        }))
+    );
+  };
+
+  const updateField = (id, key, value) => {
+    setFields((prevFields) =>
+      prevFields.map((field) => {
+        if (field.id === id) {
+          const updatedField = { ...field, [key]: value };
+
+          // Validation logic for lower, upper, and value
+          if (key === "lower" || key === "upper") {
+            // Validate lower and upper range
+            const lowerValid =
+              parseInt(updatedField.lower) >= 0 &&
+              parseInt(updatedField.lower) < wordSize;
+            const upperValid =
+              parseInt(updatedField.upper) > parseInt(updatedField.lower) &&
+              parseInt(updatedField.upper) < wordSize;
+
+            // Enable the upper field if lower is valid
+            if (lowerValid) {
+              updatedField.valid =
+                upperValid &&
+                /^[01]*$/.test(updatedField.value) &&
+                updatedField.value.length ===
+                  parseInt(updatedField.upper) -
+                    parseInt(updatedField.lower) +
+                    1;
+            } else {
+              updatedField.valid = false;
+            }
+          }
+
+          if (key === "value") {
+            // Validate value only if lower and upper are set correctly
+            const lower = parseInt(updatedField.lower);
+            const upper = parseInt(updatedField.upper);
+            const isValidValue =
+              /^[01]*$/.test(updatedField.value) &&
+              updatedField.value.length === upper - lower + 1;
+            updatedField.valid = isValidValue;
+          }
+
+          return updatedField;
+        }
+        return field;
+      })
+    );
+  };
 
   return (
     <Card className="flex flex-col w-[800px]">
@@ -55,91 +117,86 @@ export default function InstructionCard({ instNo, wordSize }) {
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
             <div className="flex flex-col gap-4">
-              {" "}
-              <CardTitle>Instruction Field Range 1</CardTitle>
-              <div className="flex flex-row gap-4">
-                {" "}
-                <HoverCard>
-                  <HoverCardTrigger>
-                    {" "}
-                    <Input type="email" placeholder="Bit Index Lower" />
-                  </HoverCardTrigger>
-                  <HoverCardContent>Add Desc</HoverCardContent>
-                </HoverCard>
-                <HoverCard>
-                  <HoverCardTrigger>
-                    {" "}
-                    <Input type="email" placeholder="Bit Index Upper" />
-                  </HoverCardTrigger>
-                  <HoverCardContent>Add Desc</HoverCardContent>
-                </HoverCard>
-                <HoverCard>
-                  <HoverCardTrigger>
-                    {" "}
-                    <Input type="email" placeholder="Value" />
-                  </HoverCardTrigger>
-                  <HoverCardContent>Add Desc</HoverCardContent>
-                </HoverCard>
-              </div>
+              {fields.map((field) => (
+                <div key={field.id} className="flex flex-col gap-4">
+                  <CardTitle>Instruction Field Range {field.id}</CardTitle>
+                  <div className="flex flex-row gap-4">
+                    <HoverCard>
+                      <HoverCardTrigger>
+                        <Input
+                          type="number"
+                          placeholder={`Bit Index Lower`}
+                          value={field.lower}
+                          min="0"
+                          max={wordSize - 1}
+                          onChange={(e) =>
+                            updateField(field.id, "lower", e.target.value)
+                          }
+                          className="w-[200px]"
+                        />
+                      </HoverCardTrigger>
+                      <HoverCardContent>
+                        Enter the lower bit index
+                      </HoverCardContent>
+                    </HoverCard>
+
+                    <HoverCard>
+                      <HoverCardTrigger>
+                        <Input
+                          type="number"
+                          placeholder={`Bit Index Upper `}
+                          value={field.upper}
+                          disabled={!field.lower} // Disable if lower is not set
+                          min={parseInt(field.lower) + 1 || 0} // Ensure upper > lower
+                          max={wordSize - 1}
+                          onChange={(e) =>
+                            updateField(field.id, "upper", e.target.value)
+                          }
+                          className="w-[200px]"
+                        />
+                      </HoverCardTrigger>
+                      <HoverCardContent>
+                        Enter the upper bit index
+                      </HoverCardContent>
+                    </HoverCard>
+
+                    <HoverCard>
+                      <HoverCardTrigger>
+                        <Input
+                          type="text"
+                          placeholder={`Value ${field.id}`}
+                          value={field.value}
+                          disabled={!field.upper} // Disable if upper is not set
+                          onChange={(e) =>
+                            updateField(field.id, "value", e.target.value)
+                          }
+                          pattern="[01]*" // Only allow 0 and 1
+                          maxLength={
+                            parseInt(field.upper) - parseInt(field.lower) + 1
+                          } // Limit length based on range
+                        />
+                      </HoverCardTrigger>
+                      <HoverCardContent>Enter the value</HoverCardContent>
+                    </HoverCard>
+
+                    <Button
+                      variant="outline"
+                      className="flex items-center p-2"
+                      onClick={() => removeField(field.id)} // Remove the field
+                    >
+                      <Cross2Icon className="w-4 h-4" />
+                    </Button>
+                  </div>
+                </div>
+              ))}
+              <Button variant="secondary" onClick={addField}>
+                + New Instruction Field
+              </Button>
             </div>
-            <div className="flex flex-col gap-4">
-              {" "}
-              <CardTitle>Instruction Field Range 2</CardTitle>
-              <div className="flex flex-row gap-4">
-                <HoverCard>
-                  <HoverCardTrigger>
-                    {" "}
-                    <Input type="email" placeholder="Bit Index Lower" />
-                  </HoverCardTrigger>
-                  <HoverCardContent>Add Desc</HoverCardContent>
-                </HoverCard>
-                <HoverCard>
-                  <HoverCardTrigger>
-                    {" "}
-                    <Input type="email" placeholder="Bit Index Upper" />
-                  </HoverCardTrigger>
-                  <HoverCardContent>Add Desc</HoverCardContent>
-                </HoverCard>
-                <HoverCard>
-                  <HoverCardTrigger>
-                    {" "}
-                    <Input type="email" placeholder="Value" />
-                  </HoverCardTrigger>
-                  <HoverCardContent>Add Desc</HoverCardContent>
-                </HoverCard>
-              </div>
-            </div>
-            <div className="flex flex-col gap-4">
-              {" "}
-              <CardTitle>Instruction Field Range 3</CardTitle>
-              <div className="flex flex-row gap-4">
-                {" "}
-                <HoverCard>
-                  <HoverCardTrigger>
-                    {" "}
-                    <Input type="email" placeholder="Bit Index Lower" />
-                  </HoverCardTrigger>
-                  <HoverCardContent>Add Desc</HoverCardContent>
-                </HoverCard>
-                <HoverCard>
-                  <HoverCardTrigger>
-                    {" "}
-                    <Input type="email" placeholder="Bit Index Upper" />
-                  </HoverCardTrigger>
-                  <HoverCardContent>Add Desc</HoverCardContent>
-                </HoverCard>
-                <HoverCard>
-                  <HoverCardTrigger>
-                    {" "}
-                    <Input type="email" placeholder="Value" />
-                  </HoverCardTrigger>
-                  <HoverCardContent>Add Desc</HoverCardContent>
-                </HoverCard>
-              </div>
-            </div>
+            <CardTitle>Instruction Mapping</CardTitle>
+            <BitDisplay fields={fields} wordSize={wordSize} />
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader>
             <CardTitle>Instruction Description</CardTitle>
@@ -206,36 +263,6 @@ export default function InstructionCard({ instNo, wordSize }) {
                 <HoverCardContent>Add Desc</HoverCardContent>
               </HoverCard>
             </div>
-
-            {/* <Collapsible
-              open={isOpen}
-              onOpenChange={setIsOpen}
-              className="w-[350px] mb-2"
-            >
-              <div className="flex items-center space-x-4 ">
-                <CardTitle>RS1</CardTitle>
-
-                <CollapsibleTrigger asChild>
-                  <Button variant="ghost" size="sm">
-                    {isOpen ? (
-                      <ChevronUpIcon className="w-5 h-5" />
-                    ) : (
-                      <ChevronDownIcon className="w-5 h-5" />
-                    )}{" "}
-                    <span className="sr-only">Toggle</span>
-                  </Button>
-                </CollapsibleTrigger>
-              </div>
-
-              <CollapsibleContent className="">
-                <div className="rounded-md border px-4 py-2 font-mono text-sm shadow-sm">
-                  @radix-ui/colors
-                </div>
-                <div className="rounded-md border px-4 py-2 font-mono text-sm shadow-sm">
-                  @stitches/react
-                </div>
-              </CollapsibleContent>
-            </Collapsible> */}
             <div className="flex flex-col gap-4">
               {" "}
               <CardTitle>RS1</CardTitle>
