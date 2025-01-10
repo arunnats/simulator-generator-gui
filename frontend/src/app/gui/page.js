@@ -1,35 +1,6 @@
 import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-import { Switch } from "@/components/ui/switch";
-
 import { Button } from "@/components/ui/button";
-
-import { Input } from "@/components/ui/input";
-
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-
-import InstructionCard from "@/components/instructioncard";
+import InstructionCard from "@/components/guicard/instructioncard/instructioncard";
 
 export default function GUI() {
   return (
