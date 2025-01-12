@@ -1,40 +1,35 @@
 import React from "react";
 
 export default function BitDisplay({ wordSize = 32, fields }) {
-  // Ensure the binary string always has the length of wordSize, initialized with "X"
-  let binaryString = Array(wordSize).fill("X").join("");
+  // Initialize the binary string with "X"
+  let binaryString = Array(wordSize).fill("X");
 
-  // Populate the binary string based on the fields
+  // Process each field to update the binary string
   fields.forEach(({ lower, upper, value }) => {
     let valueIndex = 0;
     for (let i = lower; i <= upper; i++) {
       if (valueIndex < value.length) {
-        binaryString =
-          binaryString.substring(0, i) +
-          value[valueIndex] +
-          binaryString.substring(i + 1);
+        binaryString[i] = value[valueIndex];
         valueIndex++;
       } else {
-        // If value is shorter than the range, fill with "X"
-        binaryString =
-          binaryString.substring(0, i) + "X" + binaryString.substring(i + 1);
+        binaryString[i] = "X"; // Fill with "X" if value is shorter
       }
     }
   });
 
-  // Ensure the binary string length matches the wordSize (padding if necessary)
-  binaryString = binaryString.substring(0, wordSize).padEnd(wordSize, "X");
+  // Convert the binary array back to a string
+  const binaryStringResult = binaryString.join("");
 
-  // Split the binary string into blocks of 16
+  // Split the binary string into 16-bit blocks
   const blocks = [];
-  for (let i = 0; i < binaryString.length; i += 16) {
-    blocks.push(binaryString.slice(i, i + 16));
+  for (let i = 0; i < binaryStringResult.length; i += 16) {
+    blocks.push(binaryStringResult.slice(i, i + 16));
   }
 
-  // Ensure that we have enough blocks for the wordSize (pad with empty blocks if necessary)
-  const totalBlocks = wordSize / 16;
+  // Ensure there are enough blocks for the wordSize
+  const totalBlocks = Math.ceil(wordSize / 16);
   while (blocks.length < totalBlocks) {
-    blocks.push("X".repeat(16)); // Add empty blocks if the binaryString is shorter than the wordSize
+    blocks.push("X".repeat(16));
   }
 
   return (
@@ -42,8 +37,8 @@ export default function BitDisplay({ wordSize = 32, fields }) {
       {blocks.map((block, blockIndex) => (
         <div key={blockIndex} className="flex border-2 border-black shadow-md">
           {[...block].map((bit, bitIndex) => {
-            // Calculate position
-            const position = (totalBlocks - 1 - blockIndex) * 16 + bitIndex;
+            // Calculate the position (right-to-left indexing)
+            const position = blockIndex * 16 + bitIndex;
 
             return (
               <div
