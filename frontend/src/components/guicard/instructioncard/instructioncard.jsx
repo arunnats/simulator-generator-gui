@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useImperativeHandle } from "react";
 import {
   Card,
   CardContent,
@@ -26,12 +26,13 @@ import {
 } from "@/components/ui/select";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import BitDisplay from "./BitDisplay";
-import { toast } from "sonner";
 
 export default function InstructionCard({
+  wordSize,
+  onDelete,
   instruction,
   updateInstructionData,
-  onDelete,
+  ref,
 }) {
   const [fields, setFields] = useState([
     { id: 1, lower: "", upper: "", value: "", valid: false, maxLength: null },
@@ -55,6 +56,10 @@ export default function InstructionCard({
   const [immediate, setImmediate] = useState([
     { instr_lower: "", instr_upper: "", imm_lower: "", imm_upper: "" },
   ]);
+
+  useImperativeHandle(ref, () => ({
+    createJSON,
+  }));
 
   const addField = () => {
     setFields((prevFields) => [
@@ -174,58 +179,50 @@ export default function InstructionCard({
       })),
       instruction: {
         mnemonic: mnemonic,
-        rs1: rs1.map((field) => ({
-          instruction_bits: {
-            instruction_bit_index_lower: field.instr_lower
-              ? field.instr_lower
-              : "none",
-            instruction_bit_index_higher: field.instr_upper
-              ? field.instr_upper
-              : "none",
-            rs1_bit_index_lower: field.rs1_lower ? field.rs1_lower : "none",
-            rs1_bit_index_higher: field.rs1_upper ? field.rs1_upper : "none",
-          },
-        })),
-        rs2: rs2.map((field) => ({
-          instruction_bits: {
-            instruction_bit_index_lower: field.instr_lower
-              ? field.instr_lower
-              : "none",
-            instruction_bit_index_higher: field.instr_upper
-              ? field.instr_upper
-              : "none",
-            rs2_bit_index_lower: field.rs2_lower ? field.rs2_lower : "none",
-            rs2_bit_index_higher: field.rs2_upper ? field.rs2_upper : "none",
-          },
-        })),
-        rd: rd.map((field) => ({
-          instruction_bits: {
-            instruction_bit_index_lower: field.instr_lower
-              ? field.instr_lower
-              : "none",
-            instruction_bit_index_higher: field.instr_upper
-              ? field.instr_upper
-              : "none",
-            rd_bit_index_lower: field.rd_lower ? field.rd_lower : "none",
-            rd_bit_index_higher: field.rd_upper ? field.rd_upper : "none",
-          },
-        })),
-        immediate: immediate.map((field) => ({
-          instruction_bits: {
-            instruction_bit_index_lower: field.instr_lower
-              ? field.instr_lower
-              : "none",
-            instruction_bit_index_higher: field.instr_upper
-              ? field.instr_upper
-              : "none",
-            immediate_bit_index_lower: field.imm_lower
-              ? field.imm_lower
-              : "none",
-            immediate_bit_index_higher: field.imm_upper
-              ? field.imm_upper
-              : "none",
-          },
-        })),
+        rs1: {
+          instruction_bit_index_lower: rs1[0].instr_lower
+            ? rs1[0].instr_lower
+            : "none",
+          instruction_bit_index_higher: rs1[0].instr_upper
+            ? rs1[0].instr_upper
+            : "none",
+          rs1_bit_index_lower: rs1[0].rs1_lower ? rs1[0].rs1_lower : "none",
+          rs1_bit_index_higher: rs1[0].rs1_upper ? rs1[0].rs1_upper : "none",
+        },
+        rs2: {
+          instruction_bit_index_lower: rs2[0].instr_lower
+            ? rs2[0].instr_lower
+            : "none",
+          instruction_bit_index_higher: rs2[0].instr_upper
+            ? rs2[0].instr_upper
+            : "none",
+          rs2_bit_index_lower: rs2[0].rs2_lower ? rs2[0].rs2_lower : "none",
+          rs2_bit_index_higher: rs2[0].rs2_upper ? rs2[0].rs2_upper : "none",
+        },
+        rd: {
+          instruction_bit_index_lower: rd[0].instr_lower
+            ? rd[0].instr_lower
+            : "none",
+          instruction_bit_index_higher: rd[0].instr_upper
+            ? rd[0].instr_upper
+            : "none",
+          rd_bit_index_lower: rd[0].rd_lower ? rd[0].rd_lower : "none",
+          rd_bit_index_higher: rd[0].rd_upper ? rd[0].rd_upper : "none",
+        },
+        immediate: {
+          instruction_bit_index_lower: immediate[0].instr_lower
+            ? immediate[0].instr_lower
+            : "none",
+          instruction_bit_index_higher: immediate[0].instr_upper
+            ? immediate[0].instr_upper
+            : "none",
+          immediate_bit_index_lower: immediate[0].imm_lower
+            ? immediate[0].imm_lower
+            : "none",
+          immediate_bit_index_higher: immediate[0].imm_upper
+            ? immediate[0].imm_upper
+            : "none",
+        },
         sign_extend_immediate: signExtendImmediate ? 1 : 0,
         instruction_type: instructionType,
         branch_condition: branchCondition,
@@ -234,7 +231,9 @@ export default function InstructionCard({
         register_write: registerWrite ? 1 : 0,
       },
     };
-    console.log(JSON.stringify(element, null, 2)); // Logs the JSON with pretty formatting
+    updateInstructionData(instruction.id, element);
+    // console.log("CREATE")
+    // console.log(JSON.stringify(element, null, 2)); // Logs the JSON with pretty formatting
   };
 
   return (
@@ -683,7 +682,7 @@ export default function InstructionCard({
         <Button variant="outline" onClick={onDelete}>
           Delete Instruction
         </Button>
-        {/* <Button variant="secondary" onClick={logJSON}>
+        {/* <Button variant="secondary" onClick={createJSON}>
           Log JSON
         </Button> */}
       </CardFooter>

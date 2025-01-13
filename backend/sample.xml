@@ -989,7 +989,7 @@
       </address_translation>
       <protection_encodings_for_which_memory_access_is_not_allowed>
          <protection_encoding value = "0b1101"/>
-	 <protection_encoding value = "0b1111"/>
+	      <protection_encoding value = "0b1111"/>
       </protection_encodings_for_which_memory_access_is_not_allowed>
       <protection_table protection_table_name = "CIP_table" protection_encoding_length_in_bits = "4" protection_encoding_count = "1024">
          <protection_encoding from = "0" to = "1023" value = "0b1100"/>
