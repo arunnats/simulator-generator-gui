@@ -28,14 +28,18 @@ import { Cross2Icon } from "@radix-ui/react-icons";
 import BitDisplay from "./BitDisplay";
 import { toast } from "sonner";
 
-export default function InstructionCard({ instNo, wordSize = 32 }) {
+export default function InstructionCard({
+  instruction,
+  updateInstructionData,
+  onDelete,
+}) {
   const [fields, setFields] = useState([
     { id: 1, lower: "", upper: "", value: "", valid: false, maxLength: null },
   ]);
   const [mnemonic, setMnemonic] = useState("");
-  const [instructionType, setInstructionType] = useState("null");
-  const [branchCondition, setBranchCondition] = useState("null");
-  const [targetAddressType, setTargetAddressType] = useState("null");
+  const [instructionType, setInstructionType] = useState("none");
+  const [branchCondition, setBranchCondition] = useState("none");
+  const [targetAddressType, setTargetAddressType] = useState("none");
   const [signExtendImmediate, setSignExtendImmediate] = useState(false);
   const [registerRead, setRegisterRead] = useState(false);
   const [registerWrite, setRegisterWrite] = useState(false);
@@ -159,13 +163,13 @@ export default function InstructionCard({ instNo, wordSize = 32 }) {
     />
   );
 
-  const logJSON = () => {
+  const createJSON = () => {
     const element = {
       instruction_field_value: fields.map((field) => ({
         instruction_bits: {
           bit_index_lower: field.lower,
           bit_index_higher: field.upper,
-          value: field.value,
+          value: "0b" + field.value,
         },
       })),
       instruction: {
@@ -230,14 +234,13 @@ export default function InstructionCard({ instNo, wordSize = 32 }) {
         register_write: registerWrite ? 1 : 0,
       },
     };
-
     console.log(JSON.stringify(element, null, 2)); // Logs the JSON with pretty formatting
   };
 
   return (
     <Card className="flex flex-col w-[800px]">
       <CardHeader>
-        <CardTitle>Instruction - {instNo}</CardTitle>
+        <CardTitle>Instruction </CardTitle>
         <CardDescription>Hover Over Field For Information.</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
@@ -349,7 +352,7 @@ export default function InstructionCard({ instNo, wordSize = 32 }) {
               </HoverCard>
               <HoverCard>
                 <HoverCardTrigger>
-                  <Select>
+                  <Select onValueChange={(value) => setInstructionType(value)}>
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="Instruction Type" />
                     </SelectTrigger>
@@ -364,7 +367,7 @@ export default function InstructionCard({ instNo, wordSize = 32 }) {
               </HoverCard>
               <HoverCard>
                 <HoverCardTrigger>
-                  <Select>
+                  <Select onValueChange={(value) => setBranchCondition(value)}>
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="Branch Condition" />
                     </SelectTrigger>
@@ -381,7 +384,9 @@ export default function InstructionCard({ instNo, wordSize = 32 }) {
               </HoverCard>
               <HoverCard>
                 <HoverCardTrigger>
-                  <Select>
+                  <Select
+                    onValueChange={(value) => setTargetAddressType(value)}
+                  >
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="Target Address Type" />
                     </SelectTrigger>
@@ -675,10 +680,12 @@ export default function InstructionCard({ instNo, wordSize = 32 }) {
       </CardContent>
       <CardFooter className="flex flex-row w-full justify-center gap-56">
         <Button variant="secondary">Duplicate Instruction</Button>
-        <Button variant="outline">Delete Instruction</Button>
-        <Button variant="secondary" onClick={logJSON}>
-          Log JSON
+        <Button variant="outline" onClick={onDelete}>
+          Delete Instruction
         </Button>
+        {/* <Button variant="secondary" onClick={logJSON}>
+          Log JSON
+        </Button> */}
       </CardFooter>
     </Card>
   );
