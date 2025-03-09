@@ -16,6 +16,8 @@ import RegisterCard from "@/components/guicard/registerCard/RegisterCard";
 import AddressTranslationCard from "@/components/guicard/addressTranslationCard/AddressTranslationCard";
 import ProtectionEncodingCard from "@/components/guicard/protectionEncodingCard/ProtectionEncodingCard";
 import ProtectionTableCard from "@/components/guicard/protectionTable/ProtectionTable";
+import ResourceCard from "@/components/guicard/resourceCard/ResourceCard";
+import PipelineCard from "@/components/guicard/pipelineCard/PipelineCard";
 
 import * as Yup from "yup";
 
@@ -150,6 +152,245 @@ const GUISchema = Yup.object().shape({
       })
     ),
   }),
+  mode: Yup.object().shape({
+    modeOnReset: Yup.string().required("Mode on reset is required"),
+  }),
+  resources: Yup.object().shape({
+    L1_I_cache: Yup.object().shape({
+      blockSizeInBytes: Yup.number()
+        .required("Block size is required")
+        .positive("Must be positive"),
+      associativity: Yup.number()
+        .required("Associativity is required")
+        .positive("Must be positive"),
+      sizeInBytes: Yup.number()
+        .required("Size is required")
+        .positive("Must be positive"),
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+    }),
+    L1_D_cache: Yup.object().shape({
+      blockSizeInBytes: Yup.number()
+        .required("Block size is required")
+        .positive("Must be positive"),
+      associativity: Yup.number()
+        .required("Associativity is required")
+        .positive("Must be positive"),
+      sizeInBytes: Yup.number()
+        .required("Size is required")
+        .positive("Must be positive"),
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+    }),
+    L2_cache: Yup.object().shape({
+      blockSizeInBytes: Yup.number()
+        .required("Block size is required")
+        .positive("Must be positive"),
+      associativity: Yup.number()
+        .required("Associativity is required")
+        .positive("Must be positive"),
+      sizeInBytes: Yup.number()
+        .required("Size is required")
+        .positive("Must be positive"),
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+    }),
+    L3_cache: Yup.object().shape({
+      blockSizeInBytes: Yup.number()
+        .required("Block size is required")
+        .positive("Must be positive"),
+      associativity: Yup.number()
+        .required("Associativity is required")
+        .positive("Must be positive"),
+      sizeInBytes: Yup.number()
+        .required("Size is required")
+        .positive("Must be positive"),
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+    }),
+    physical_memory: Yup.object().shape({
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+    }),
+    I_TLB: Yup.object().shape({
+      noOfPTEsInEachBlock: Yup.number()
+        .required("PTEs count is required")
+        .positive("Must be positive"),
+      associativity: Yup.number()
+        .required("Associativity is required")
+        .positive("Must be positive"),
+      noOfEntries: Yup.number()
+        .required("Entries count is required")
+        .positive("Must be positive"),
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+    }),
+    D_TLB: Yup.object().shape({
+      noOfPTEsInEachBlock: Yup.number()
+        .required("PTEs count is required")
+        .positive("Must be positive"),
+      associativity: Yup.number()
+        .required("Associativity is required")
+        .positive("Must be positive"),
+      noOfEntries: Yup.number()
+        .required("Entries count is required")
+        .positive("Must be positive"),
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+    }),
+    integer_ALU: Yup.object().shape({
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+      inputWidthInBits: Yup.number()
+        .required("Input width is required")
+        .positive("Must be positive"),
+    }),
+    integer_MUL: Yup.object().shape({
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+      inputWidthInBits: Yup.number()
+        .required("Input width is required")
+        .positive("Must be positive"),
+    }),
+    integer_DIV: Yup.object().shape({
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+      inputWidthInBits: Yup.number()
+        .required("Input width is required")
+        .positive("Must be positive"),
+    }),
+    float_ALU: Yup.object().shape({
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+      inputWidthInBits: Yup.number()
+        .required("Input width is required")
+        .positive("Must be positive"),
+    }),
+    float_MUL: Yup.object().shape({
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+      inputWidthInBits: Yup.number()
+        .required("Input width is required")
+        .positive("Must be positive"),
+    }),
+    float_DIV: Yup.object().shape({
+      latencyInCycles: Yup.number()
+        .required("Latency is required")
+        .positive("Must be positive"),
+      inputWidthInBits: Yup.number()
+        .required("Input width is required")
+        .positive("Must be positive"),
+    }),
+  }),
+  pipeline: Yup.object().shape({
+    pipelineLength: Yup.number()
+      .required("Pipeline length is required")
+      .min(3, "Pipeline must have at least 3 stages")
+      .positive("Must be positive")
+      .integer("Must be an integer"),
+    stageAfterWhichInstructionsAreIssued: Yup.number()
+      .required("Stage is required")
+      .min(1, "Must be at least 1")
+      .test(
+        "is-less-than-pipeline-length",
+        "Must be less than pipeline length",
+        function (value) {
+          return (
+            !value ||
+            !this.parent.pipelineLength ||
+            value < this.parent.pipelineLength
+          );
+        }
+      ),
+    stageInWhichRegisterFileIsRead: Yup.number()
+      .required("Stage is required")
+      .min(1, "Must be at least 1")
+      .test(
+        "is-less-than-pipeline-length",
+        "Must be less than or equal to pipeline length",
+        function (value) {
+          return (
+            !value ||
+            !this.parent.pipelineLength ||
+            value <= this.parent.pipelineLength
+          );
+        }
+      ),
+    stageInWhichRegisterFileIsWritten: Yup.number()
+      .required("Stage is required")
+      .min(1, "Must be at least 1")
+      .test(
+        "is-less-than-pipeline-length",
+        "Must be less than or equal to pipeline length",
+        function (value) {
+          return (
+            !value ||
+            !this.parent.pipelineLength ||
+            value <= this.parent.pipelineLength
+          );
+        }
+      ),
+    stageInWhichMemoryIsWritten: Yup.number()
+      .required("Stage is required")
+      .min(1, "Must be at least 1")
+      .test(
+        "is-less-than-pipeline-length",
+        "Must be less than or equal to pipeline length",
+        function (value) {
+          return (
+            !value ||
+            !this.parent.pipelineLength ||
+            value <= this.parent.pipelineLength
+          );
+        }
+      ),
+    stageInWhichTakenBranchOrUnconditionalJumpIsDetected: Yup.number()
+      .required("Stage is required")
+      .min(1, "Must be at least 1")
+      .test(
+        "is-less-than-pipeline-length",
+        "Must be less than or equal to pipeline length",
+        function (value) {
+          return (
+            !value ||
+            !this.parent.pipelineLength ||
+            value <= this.parent.pipelineLength
+          );
+        }
+      ),
+    stages: Yup.array().of(
+      Yup.object().shape({
+        stageNumber: Yup.number().required("Stage number is required"),
+        action: Yup.string(),
+        resources: Yup.object().shape({
+          load: Yup.string(),
+          store: Yup.string(),
+          conditional_branch: Yup.string(),
+          unconditional_jump: Yup.string(),
+          environment_call: Yup.string(),
+          trap_return: Yup.string(),
+          integer_ALU: Yup.string(),
+          integer_MUL: Yup.string(),
+          integer_DIV: Yup.string(),
+          float_ALU: Yup.string(),
+          float_MUL: Yup.string(),
+          float_DIV: Yup.string(),
+        }),
+      })
+    ),
+  }),
 });
 
 // Initial empty instruction template
@@ -184,6 +425,26 @@ const protectionTableEncoding = {
   from: "",
   to: "",
   value: "",
+};
+
+const emptyStage = {
+  id: 0,
+  stageNumber: "",
+  action: "",
+  resources: {
+    load: "none",
+    store: "none",
+    conditional_branch: "none",
+    unconditional_jump: "none",
+    environment_call: "none",
+    trap_return: "none",
+    integer_ALU: "none",
+    integer_MUL: "none",
+    integer_DIV: "none",
+    float_ALU: "none",
+    float_MUL: "none",
+    float_DIV: "none",
+  },
 };
 
 export default function GUI() {
@@ -251,6 +512,88 @@ export default function GUI() {
       encodings: [
         {
           ...protectionTableEncoding,
+          id: 1,
+        },
+      ],
+    },
+    mode: {
+      modeOnReset: "",
+    },
+    resources: {
+      L1_I_cache: {
+        blockSizeInBytes: "",
+        associativity: "",
+        sizeInBytes: "",
+        latencyInCycles: "",
+      },
+      L1_D_cache: {
+        blockSizeInBytes: "",
+        associativity: "",
+        sizeInBytes: "",
+        latencyInCycles: "",
+      },
+      L2_cache: {
+        blockSizeInBytes: "",
+        associativity: "",
+        sizeInBytes: "",
+        latencyInCycles: "",
+      },
+      L3_cache: {
+        blockSizeInBytes: "",
+        associativity: "",
+        sizeInBytes: "",
+        latencyInCycles: "",
+      },
+      physical_memory: {
+        latencyInCycles: "",
+      },
+      I_TLB: {
+        noOfPTEsInEachBlock: "",
+        associativity: "",
+        noOfEntries: "",
+        latencyInCycles: "",
+      },
+      D_TLB: {
+        noOfPTEsInEachBlock: "",
+        associativity: "",
+        noOfEntries: "",
+        latencyInCycles: "",
+      },
+      integer_ALU: {
+        latencyInCycles: "",
+        inputWidthInBits: "",
+      },
+      integer_MUL: {
+        latencyInCycles: "",
+        inputWidthInBits: "",
+      },
+      integer_DIV: {
+        latencyInCycles: "",
+        inputWidthInBits: "",
+      },
+      float_ALU: {
+        latencyInCycles: "",
+        inputWidthInBits: "",
+      },
+      float_MUL: {
+        latencyInCycles: "",
+        inputWidthInBits: "",
+      },
+      float_DIV: {
+        latencyInCycles: "",
+        inputWidthInBits: "",
+      },
+    },
+    pipeline: {
+      pipelineLength: "",
+      stageAfterWhichInstructionsAreIssued: "",
+      stageInWhichRegisterFileIsRead: "",
+      stageInWhichRegisterFileIsWritten: "",
+      stageInWhichMemoryIsWritten: "",
+      stageInWhichTakenBranchOrUnconditionalJumpIsDetected: "",
+      stages: [
+        {
+          ...emptyStage,
           id: 1,
         },
       ],
@@ -384,19 +727,176 @@ export default function GUI() {
       })),
     };
 
-    return {
-      architecture_specifications: {
-        ISA: {
-          instructionlen_in_bits: values.wordSize,
-          mapping_from_set_of_instruction_field_values_to_set_of_instructions:
-            instructionMappings,
-        },
-        registers,
-        address_translation,
-        protection_encodings_for_which_memory_access_is_not_allowed,
-        protection_table,
+    const mode = {
+      mode_on_reset: values.mode.modeOnReset || "none",
+    };
+
+    const resources = {
+      L1_I_cache: {
+        block_size_in_bytes:
+          values.resources.L1_I_cache.blockSizeInBytes || "none",
+        associativity: values.resources.L1_I_cache.associativity || "none",
+        size_in_bytes: values.resources.L1_I_cache.sizeInBytes || "none",
+        latency_in_cycles:
+          values.resources.L1_I_cache.latencyInCycles || "none",
       },
-      microarchitecture_specifications: {},
+      L1_D_cache: {
+        block_size_in_bytes:
+          values.resources.L1_D_cache.blockSizeInBytes || "none",
+        associativity: values.resources.L1_D_cache.associativity || "none",
+        size_in_bytes: values.resources.L1_D_cache.sizeInBytes || "none",
+        latency_in_cycles:
+          values.resources.L1_D_cache.latencyInCycles || "none",
+      },
+      L2_cache: {
+        block_size_in_bytes:
+          values.resources.L2_cache.blockSizeInBytes || "none",
+        associativity: values.resources.L2_cache.associativity || "none",
+        size_in_bytes: values.resources.L2_cache.sizeInBytes || "none",
+        latency_in_cycles: values.resources.L2_cache.latencyInCycles || "none",
+      },
+      L3_cache: {
+        block_size_in_bytes:
+          values.resources.L3_cache.blockSizeInBytes || "none",
+        associativity: values.resources.L3_cache.associativity || "none",
+        size_in_bytes: values.resources.L3_cache.sizeInBytes || "none",
+        latency_in_cycles: values.resources.L3_cache.latencyInCycles || "none",
+      },
+      physical_memory: {
+        latency_in_cycles:
+          values.resources.physical_memory.latencyInCycles || "none",
+      },
+      I_TLB: {
+        no_of_PTEs_in_each_block:
+          values.resources.I_TLB.noOfPTEsInEachBlock || "none",
+        associativity: values.resources.I_TLB.associativity || "none",
+        no_of_entries: values.resources.I_TLB.noOfEntries || "none",
+        latency_in_cycles: values.resources.I_TLB.latencyInCycles || "none",
+      },
+      D_TLB: {
+        no_of_PTEs_in_each_block:
+          values.resources.D_TLB.noOfPTEsInEachBlock || "none",
+        associativity: values.resources.D_TLB.associativity || "none",
+        no_of_entries: values.resources.D_TLB.noOfEntries || "none",
+        latency_in_cycles: values.resources.D_TLB.latencyInCycles || "none",
+      },
+      integer_ALU: {
+        latency_in_cycles:
+          values.resources.integer_ALU.latencyInCycles || "none",
+        input_width_in_bits:
+          values.resources.integer_ALU.inputWidthInBits || "none",
+      },
+      integer_MUL: {
+        latency_in_cycles:
+          values.resources.integer_MUL.latencyInCycles || "none",
+        input_width_in_bits:
+          values.resources.integer_MUL.inputWidthInBits || "none",
+      },
+      integer_DIV: {
+        latency_in_cycles:
+          values.resources.integer_DIV.latencyInCycles || "none",
+        input_width_in_bits:
+          values.resources.integer_DIV.inputWidthInBits || "none",
+      },
+      float_ALU: {
+        latency_in_cycles: values.resources.float_ALU.latencyInCycles || "none",
+        input_width_in_bits:
+          values.resources.float_ALU.inputWidthInBits || "none",
+      },
+      float_MUL: {
+        latency_in_cycles: values.resources.float_MUL.latencyInCycles || "none",
+        input_width_in_bits:
+          values.resources.float_MUL.inputWidthInBits || "none",
+      },
+      float_DIV: {
+        latency_in_cycles: values.resources.float_DIV.latencyInCycles || "none",
+        input_width_in_bits:
+          values.resources.float_DIV.inputWidthInBits || "none",
+      },
+    };
+
+    const pipeline = {
+      pipeline_length: values.pipeline.pipelineLength || "none",
+      stage_after_which_instructions_are_issued:
+        values.pipeline.stageAfterWhichInstructionsAreIssued || "none",
+      stage_in_which_register_file_is_read:
+        values.pipeline.stageInWhichRegisterFileIsRead || "none",
+      stage_in_which_register_file_is_written:
+        values.pipeline.stageInWhichRegisterFileIsWritten || "none",
+      stage_in_which_memory_is_written:
+        values.pipeline.stageInWhichMemoryIsWritten || "none",
+      stage_in_which_taken_branch_or_unconditional_jump_is_detected:
+        values.pipeline.stageInWhichTakenBranchOrUnconditionalJumpIsDetected ||
+        "none",
+      stage: values.pipeline.stages.map((stage) => ({
+        stage_number: stage.stageNumber,
+        action: stage.action || "",
+        resource: [
+          { instruction_type: "load", _text: stage.resources.load || "none" },
+          { instruction_type: "store", _text: stage.resources.store || "none" },
+          {
+            instruction_type: "conditional_branch",
+            _text: stage.resources.conditional_branch || "none",
+          },
+          {
+            instruction_type: "unconditional_jump",
+            _text: stage.resources.unconditional_jump || "none",
+          },
+          {
+            instruction_type: "environment_call",
+            _text: stage.resources.environment_call || "none",
+          },
+          {
+            instruction_type: "trap_return",
+            _text: stage.resources.trap_return || "none",
+          },
+          {
+            instruction_type: "integer_ALU",
+            _text: stage.resources.integer_ALU || "none",
+          },
+          {
+            instruction_type: "integer_MUL",
+            _text: stage.resources.integer_MUL || "none",
+          },
+          {
+            instruction_type: "integer_DIV",
+            _text: stage.resources.integer_DIV || "none",
+          },
+          {
+            instruction_type: "float_ALU",
+            _text: stage.resources.float_ALU || "none",
+          },
+          {
+            instruction_type: "float_MUL",
+            _text: stage.resources.float_MUL || "none",
+          },
+          {
+            instruction_type: "float_DIV",
+            _text: stage.resources.float_DIV || "none",
+          },
+        ],
+      })),
+    };
+
+    return {
+      processor_specifications: {
+        architecture_specifications: {
+          ISA: {
+            instructionlen_in_bits: values.wordSize,
+            mapping_from_set_of_instruction_field_values_to_set_of_instructions:
+              instructionMappings,
+          },
+          registers,
+          address_translation,
+          protection_encodings_for_which_memory_access_is_not_allowed,
+          protection_table,
+        },
+        microarchitecture_specifications: {
+          mode,
+          resources,
+          pipeline,
+        },
+      },
     };
   };
 
@@ -490,6 +990,10 @@ export default function GUI() {
                   />
 
                   <ProtectionTableCard wordSize={parseInt(values.wordSize)} />
+
+                  <ResourceCard wordSize={parseInt(values.wordSize)} />
+
+                  <PipelineCard />
 
                   <Button type="submit" variant="secondary">
                     Generate JSON
