@@ -18,7 +18,7 @@ import ProtectionEncodingCard from "@/components/guicard/protectionEncodingCard/
 import ProtectionTableCard from "@/components/guicard/protectionTable/ProtectionTable";
 import ResourceCard from "@/components/guicard/resourceCard/ResourceCard";
 import PipelineCard from "@/components/guicard/pipelineCard/PipelineCard";
-
+import { json2xml } from "xml-js";
 import * as Yup from "yup";
 
 // Validation schema for the entire form
@@ -900,15 +900,27 @@ export default function GUI() {
     };
   };
 
+  const downloadXML = (xmlContent) => {
+    const element = document.createElement("a");
+    const file = new Blob([xmlContent], { type: "text/xml" });
+    element.href = URL.createObjectURL(file);
+    element.download = "isa_specifications.xml";
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  };
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Formik
           initialValues={initialValues}
-          validationSchema={GUISchema}
+          validateOnChange={false}
           onSubmit={(values) => {
             const isaJson = generateISAJson(values);
             console.log(JSON.stringify(isaJson, null, 2));
+            const xml = json2xml(isaJson, { compact: true, spaces: 4 });
+            downloadXML(xml);
           }}
         >
           {({
@@ -997,6 +1009,10 @@ export default function GUI() {
 
                   <Button type="submit" variant="secondary">
                     Generate JSON
+                  </Button>
+
+                  <Button type="submit" variant="secondary">
+                    Generate and Download XML
                   </Button>
                 </>
               )}

@@ -20,9 +20,13 @@ export default function PipelineCard({ wordSize }) {
   const { values, setFieldValue, errors, touched } = useFormikContext();
 
   // Helper function to validate numeric inputs
-  const handleNumericInputChange = (fieldName, value) => {
-    const numericValue = value.replace(/[^0-9]/g, "");
+  const handleNumericInputChange = (fieldName, e) => {
+    const numericValue = e.target.value.replace(/[^0-9]/g, "");
     setFieldValue(fieldName, numericValue);
+  };
+
+  const handleTextInputChange = (fieldName, e) => {
+    setFieldValue(fieldName, e.target.value);
   };
 
   // Update stages when pipeline length changes
@@ -104,10 +108,7 @@ export default function PipelineCard({ wordSize }) {
                 placeholder="Pipeline Length (min 3)"
                 value={values.pipeline.pipelineLength}
                 onChange={(e) =>
-                  handleNumericInputChange(
-                    "pipeline.pipelineLength",
-                    e.target.value
-                  )
+                  handleNumericInputChange("pipeline.pipelineLength", e)
                 }
                 min="3"
                 className="w-full"

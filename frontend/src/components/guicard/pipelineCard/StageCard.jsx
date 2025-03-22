@@ -46,6 +46,29 @@ export default function StageCard({ stage, index, stageIndex }) {
     "float_DIV",
   ];
 
+  const handleActionChange = (e) => {
+    const stageIndex = values.pipeline.stages.findIndex(
+      (s) => s.stageNumber === stage.stageNumber
+    );
+
+    if (stageIndex !== -1) {
+      setFieldValue(`pipeline.stages[${stageIndex}].action`, e.target.value);
+    }
+  };
+
+  const handleResourceChange = (resourceType, value) => {
+    const stageIndex = values.pipeline.stages.findIndex(
+      (s) => s.stageNumber === stage.stageNumber
+    );
+
+    if (stageIndex !== -1) {
+      setFieldValue(
+        `pipeline.stages[${stageIndex}].resources.${resourceType}`,
+        value
+      );
+    }
+  };
+
   return (
     <Card className="border-2 border-gray-200">
       <CardHeader className="pb-2">
@@ -60,12 +83,7 @@ export default function StageCard({ stage, index, stageIndex }) {
               <Textarea
                 placeholder="Enter action code for this stage"
                 value={stage.action}
-                onChange={(e) =>
-                  setFieldValue(
-                    `pipeline.stages[${stageIndex}].action`,
-                    e.target.value
-                  )
-                }
+                onChange={handleActionChange}
                 className="min-h-[100px]"
               />
             </HoverCardTrigger>
@@ -90,10 +108,7 @@ export default function StageCard({ stage, index, stageIndex }) {
                   <Select
                     value={stage.resources[instType.key] || "none"}
                     onValueChange={(value) =>
-                      setFieldValue(
-                        `pipeline.stages[${stageIndex}].resources.${instType.key}`,
-                        value
-                      )
+                      handleResourceChange(instType.key, value)
                     }
                   >
                     <SelectTrigger className="w-full">
