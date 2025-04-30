@@ -21,6 +21,7 @@ export default function PipelineCard({ wordSize }) {
 
   // Helper function to validate numeric inputs
   const handleNumericInputChange = (fieldName, e) => {
+    console.log(e);
     const numericValue = e.target.value.replace(/[^0-9]/g, "");
     setFieldValue(fieldName, numericValue);
   };
@@ -141,7 +142,7 @@ export default function PipelineCard({ wordSize }) {
                   onChange={(e) =>
                     handleNumericInputChange(
                       "pipeline.stageAfterWhichInstructionsAreIssued",
-                      e.target.value
+                      e
                     )
                   }
                   min="1"
@@ -167,7 +168,7 @@ export default function PipelineCard({ wordSize }) {
                   onChange={(e) =>
                     handleNumericInputChange(
                       "pipeline.stageInWhichRegisterFileIsRead",
-                      e.target.value
+                      e
                     )
                   }
                   min="1"
@@ -193,7 +194,7 @@ export default function PipelineCard({ wordSize }) {
                   onChange={(e) =>
                     handleNumericInputChange(
                       "pipeline.stageInWhichRegisterFileIsWritten",
-                      e.target.value
+                      e
                     )
                   }
                   min="1"
@@ -217,7 +218,7 @@ export default function PipelineCard({ wordSize }) {
                   onChange={(e) =>
                     handleNumericInputChange(
                       "pipeline.stageInWhichMemoryIsWritten",
-                      e.target.value
+                      e
                     )
                   }
                   min="1"
@@ -246,7 +247,7 @@ export default function PipelineCard({ wordSize }) {
                   onChange={(e) =>
                     handleNumericInputChange(
                       "pipeline.stageInWhichTakenBranchOrUnconditionalJumpIsDetected",
-                      e.target.value
+                      e
                     )
                   }
                   min="1"
